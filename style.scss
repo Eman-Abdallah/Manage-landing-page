@@ -23,6 +23,12 @@ $Vary-Light-Gray: hsl(0, 0%, 98%);
     }
 }
 
+body {
+    background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: 123% -12%, -60% 60%;
+}
+
 .show {
     display: block;
 }
@@ -33,7 +39,7 @@ $Vary-Light-Gray: hsl(0, 0%, 98%);
 
 nav {
     width: 100%;
-    background-color: white;
+    // background-color: white;
     .navbar-nav {
         margin-left: 150px;
         .nav-item {
@@ -156,11 +162,11 @@ nav {
     .swiper {
         width: 100%;
         height: 100%;
+        // background: #fff;
     }
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -196,8 +202,21 @@ nav {
 }
 
 .team {
-    background-color: $Bright-Red;
     padding: 20px 0;
+    background-color: $Bright-Red;
+    position: relative;
+    .overlay {
+        background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
+        background-repeat: no-repeat;
+        background-position: 6% 12%, 175% 112%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .1;
+        z-index: 10;
+    }
     p {
         font-size: 40px;
         font-weight: 300;
@@ -271,6 +290,12 @@ nav {
 }
 
 @media (max-width: 400px) {
+    body {
+        background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
+        background-repeat: no-repeat;
+        background-position: -44% -2%, -183% 18%, ;
+        background-size: 131%;
+    }
     nav {
         .navbar-collapse {
             ul {
@@ -280,6 +305,7 @@ nav {
                 padding: 20px;
                 margin: 20px;
                 margin-left: 43px !important;
+                background-color: white;
                 li {
                     text-align: center;
                     padding: 10px;
